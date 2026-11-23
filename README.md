@@ -48,3 +48,9 @@ plugins/
 - Added: pi harness (`jstack/docs/harness/pi.md`, `harness/jstack/pi/`) and talk notes (`jstack/docs/talk.md`)
 - Not copied: `cursor-team-kit` (`/deslop`, `control-cli`, `control-ui`), the upstream CI, and schema validation
 - License: MIT, [`jstack/LICENSE`](jstack/LICENSE)
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). The pstack-derived content and scripts retain Lauren Tan's copyright notice. Jisang Yun's additions and modifications are also MIT-licensed.
+
+Keep the copyright and permission notices when redistributing copies or substantial portions. Each plugin and generated install tree includes its own license so the notice travels with standalone installations.
