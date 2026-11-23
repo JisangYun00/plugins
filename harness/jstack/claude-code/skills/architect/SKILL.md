@@ -10,4 +10,6 @@ In Claude Code, read [the Claude Code adapter](../../docs/harness/claude-code.md
 
 Before writing code, trace every system the change touches, then sketch two different shapes for it (types, signatures, module boundaries) and pick the one where each piece of state has one owner, each task has one way to do it, and callers need to know least. Redesign instead of patching if workarounds repeat.
 
+Walk one user action through the proposed design: where does it start, which function makes the decision, and what observable result would prove it worked? Justify a split by what it makes easier. For example, changing a tagging threshold should let the user rerun tagging without extracting the raw data again. If a new layer changes nothing for the caller or the test, leave it out.
+
 For a large or contested design, run the **arena** skill instead of sketching alone.

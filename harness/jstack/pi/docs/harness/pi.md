@@ -8,7 +8,7 @@ pi loads jstack as a local package from `harness/jstack/pi`. The skills come fro
 
 | Cursor | pi |
 | --- | --- |
-| `Task` | The `subagent` tool from `pi-subagents`: `{ agent, task }` for one child, `{ workflow: "parallel", args: { tasks: [...] } }` for independent children. If only `subagents_enable` is listed, call it first. A jstack step that spawns delegates is the operator's request for them, because the operator chose to run that skill. |
+| `Task` | The `subagent` tool from `pi-subagents`: `{ agent, task }` for one child, `{ workflow: "parallel", args: { tasks: [...] } }` for independent children. If only `subagents_enable` is listed, call it first. Delegate only when the operator has requested it directly or through applicable project instructions. Selecting a skill is not permission to spawn agents. Otherwise work in this session; ask first if independent agents are essential. |
 | `AskQuestion` | `ask_user_question`. In `pi -p` mode it is absent, so ask in plain text. |
 | Open a todolist, or copy steps into the todolist tool | `todo` with `action: "create"` and `tasks: [...]`. Without it, keep the list in your reply and update it at each phase. |
 | Run another jstack skill (`/name` or "the **name** skill") | `read` `<jstack>/skills/<name>/SKILL.md` and follow it. When you tell the user to type it, write `/skill:<name>`. |
