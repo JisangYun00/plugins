@@ -1,0 +1,20 @@
+{
+  "name": "jstack",
+  "version": "0.1.0",
+  "description": "Jisang's copy of poteto's pstack. if you want to go fast, go deep first. write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "pi-subagents": {
+    "agents": [
+      "./agents"
+    ]
+  }
+}

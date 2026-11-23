@@ -1,0 +1,11 @@
+{
+  "name": "jstack",
+  "owner": { "name": "Jisang Yun" },
+  "plugins": [
+    {
+      "name": "jstack",
+      "source": "./harness/jstack/claude-code",
+      "description": "Jisang's copy of poteto's pstack. rigorous agent workflows you can parallelize with confidence."
+    }
+  ]
+}
