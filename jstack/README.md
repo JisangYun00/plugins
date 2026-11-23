@@ -12,12 +12,12 @@ there's a growing sense that ai writes too much slop code. i agree. i don't want
 
 ## install
 
-jstack lives in `~/git/00_about/jstack`. This folder, `jstack/`, is the source. `node scripts/generate-jstack-harness-trees.mjs`, run from the repository root, writes one installable copy per harness under `harness/jstack/`. After you change jstack, run it again and commit the result. `--check` fails while a generated copy is out of date.
+jstack lives in `~/git/00_about/plugins/jstack`, one plugin in the `plugins` repository. This folder is the source. `node scripts/generate-jstack-harness-trees.mjs`, run from the repository root, writes one installable copy per harness under `harness/jstack/`. After you change jstack, run it again and commit the result. `--check` fails while a generated copy is out of date.
 
 | harness | install | adapter |
 |---|---|---|
-| pi | `pi install ~/git/00_about/jstack/harness/jstack/pi`, then `/reload`. Commands are `/skill:<name>`, such as `/skill:jstack-mode`. | [pi adapter](./docs/harness/pi.md) |
-| Claude Code | `/plugin marketplace add ~/git/00_about/jstack`, then `/plugin install jstack@jstack`. Commands take a `jstack:` prefix, such as `/jstack:jstack-mode`. | [Claude Code adapter](./docs/harness/claude-code.md) |
+| pi | `pi install ~/git/00_about/plugins/harness/jstack/pi`, then `/reload`. Commands are `/skill:<name>`, such as `/skill:jstack-mode`. | [pi adapter](./docs/harness/pi.md) |
+| Claude Code | `/plugin marketplace add ~/git/00_about/plugins`, then `/plugin install jstack@jisang-plugins`. Commands take a `jstack:` prefix, such as `/jstack:jstack-mode`. | [Claude Code adapter](./docs/harness/claude-code.md) |
 | Cursor | copy or link this `jstack/` folder into `~/.cursor/plugins/local/jstack`. | none, the skills use Cursor names |
 
 Each adapter maps the Cursor names in the skills to that harness. A step that needs a Cursor-only feature, such as Bugbot or Automations, is skipped with a one-line note.

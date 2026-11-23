@@ -12,7 +12,7 @@ In a Cursor chat, run:
 
 Cursor confirms the plugin is installed.
 
-In Claude Code, run `/plugin marketplace add cursor/plugins`, then `/plugin install jstack@cursor-plugins`. Claude Code prefixes plugin commands, so each command in this guide takes a `jstack:` prefix there, such as `/jstack:setup-jstack`, which writes its model rule to `~/.claude/rules/jstack-models.md`. The [Claude Code adapter](../harness/claude-code.md) covers the other differences.
+In Claude Code, run `/plugin marketplace add ~/git/00_about/plugins`, then `/plugin install jstack@jisang-plugins`. Claude Code prefixes plugin commands, so each command in this guide takes a `jstack:` prefix there, such as `/jstack:setup-jstack`, which writes its model rule to `~/.claude/rules/jstack-models.md`. The [Claude Code adapter](../harness/claude-code.md) covers the other differences.
 
 ## Pick your models
 

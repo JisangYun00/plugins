@@ -1,0 +1,16 @@
+{
+  "name": "jisang-plugins",
+  "owner": {
+    "name": "Jisang Yun"
+  },
+  "metadata": {
+    "description": "Jisang Yun's agent plugins"
+  },
+  "plugins": [
+    {
+      "name": "jstack",
+      "source": "jstack",
+      "description": "Jisang's copy of poteto's pstack. rigorous agent workflows you can parallelize with confidence."
+    }
+  ]
+}

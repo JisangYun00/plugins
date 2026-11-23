@@ -10,7 +10,7 @@ Answer the user's question about jstack, hand them a prompt they can send, and l
 
 A message that asks for work, such as "use jstack to fix this bug", is not a help question. Read [`jstack-mode`](../jstack-mode/SKILL.md), do the work under it, and mention once that a Custom Mode keeps it on.
 
-This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed plugin, which the user may not be able to open, so give the user the file's path under `~/git/00_about/jstack/jstack/`.
+This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed plugin, which the user may not be able to open, so give the user the file's path under `~/git/00_about/plugins/jstack/`.
 
 ## Find out what they need
 

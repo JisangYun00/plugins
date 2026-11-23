@@ -12,7 +12,7 @@ Answer the user's question about jstack, hand them a prompt they can send, and l
 
 A message that asks for work, such as "use jstack to fix this bug", is not a help question. Read [`jstack-mode`](../jstack-mode/SKILL.md), do the work under it, and mention once that a Custom Mode keeps it on.
 
-This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed plugin, which the user may not be able to open, so give the user the file's path under `~/git/00_about/jstack/jstack/`.
+This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. The links here point into the installed plugin, which the user may not be able to open, so give the user the file's path under `~/git/00_about/plugins/jstack/`.
 
 ## Find out what they need
 
@@ -45,7 +45,7 @@ Installing changes nothing until the user invokes a skill. Only `/setup-jstack` 
 
 If cost is the worry, say where the tokens go and how to spend fewer. jstack spends extra tokens on subagents and review panels. Rerun `/setup-jstack` and pick a smaller budget or cheaper models. A role set to `auto` or `inherit-parent` runs on the chat's model, which saves tokens when the chat runs on Auto or a cheaper model. A shorter panel list runs fewer subagents, one for each entry. Save `/jstack-mode` for work that needs rigor.
 
-jstack is built for Cursor names. It also installs in Claude Code, where each command takes a `jstack:` prefix, such as `/jstack:jstack-mode`, and in pi, where each command is `/skill:<name>`, such as `/skill:jstack-mode`. The [Claude Code adapter](../../docs/harness/claude-code.md) and the [pi adapter](/home/jisang/git/00_about/jstack/jstack/docs/harness/pi.md) map the Cursor names, and a step that needs a Cursor-only feature, such as Bugbot or Automations, is skipped with a one-line note.
+jstack is built for Cursor names. It also installs in Claude Code, where each command takes a `jstack:` prefix, such as `/jstack:jstack-mode`, and in pi, where each command is `/skill:<name>`, such as `/skill:jstack-mode`. The [Claude Code adapter](../../docs/harness/claude-code.md) and the [pi adapter](/home/jisang/git/00_about/plugins/jstack/docs/harness/pi.md) map the Cursor names, and a step that needs a Cursor-only feature, such as Bugbot or Automations, is skipped with a one-line note.
 
 Other tools can read the skills, because they use the Agent Skills format. But most workflow skills, including `/jstack-mode`, `/how`, and `/teach`, spawn Cursor subagents, some with per-role models, and Custom Modes and `/loop` are Cursor features, so those parts may not work there.
 

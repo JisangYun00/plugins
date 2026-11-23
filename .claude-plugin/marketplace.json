@@ -1,6 +1,8 @@
 {
-  "name": "jstack",
-  "owner": { "name": "Jisang Yun" },
+  "name": "jisang-plugins",
+  "owner": {
+    "name": "Jisang Yun"
+  },
   "plugins": [
     {
       "name": "jstack",

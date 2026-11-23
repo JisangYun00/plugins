@@ -52,7 +52,7 @@ Follow its steps with these changes:
 | Cursor | pi |
 | --- | --- |
 | `.cursor/skills/`, `~/.cursor/skills/` | `.pi/skills/` or `.agents/skills/` in the project, `~/.pi/agent/skills/` or `~/.agents/skills/` for the user. |
-| `~/.cursor/plugins/`, `.cursor-plugin/plugin.json` | The jstack package, `~/git/00_about/jstack/harness/jstack/pi/` unless `pi list` shows another path, and its `package.json`. |
+| `~/.cursor/plugins/`, `.cursor-plugin/plugin.json` | The jstack package, `~/git/00_about/plugins/harness/jstack/pi/` unless `pi list` shows another path, and its `package.json`. |
 | `.cursor/rules/*.mdc`, always-applied rules | `AGENTS.md` in the project, or `~/.pi/agent/AGENTS.md` for every project. pi never reads `.mdc` files. The model rule is the exception. See Models. |
 | `https://github.com/cursor/plugins/blob/main/pstack/<path>` | `<jstack>/<path>` when that file exists. Read the local copy and never fetch it. |
 | Transcripts in `~/.cursor/projects/<slug>/agent-transcripts/` | `~/.pi/agent/sessions/<slug>/*.jsonl`. The slug is the workspace path with each `/` changed to `-`, wrapped in `--`, so `/home/you/proj` is `--home-you-proj--`. The newest `.jsonl` is the current session. Subagent runs are listed by `subagent({ action: "status" })`. Read only this workspace's folder. |

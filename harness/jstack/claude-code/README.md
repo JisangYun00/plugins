@@ -2,7 +2,7 @@
 
 jstack is Jisang Yun's working copy of [pstack](https://github.com/cursor/plugins/tree/main/pstack) by [poteto](https://x.com/poteto) (Lauren Tan), MIT licensed. The skills, playbooks, principles, and agents are pstack's, renamed so they can change here on their own: `pstack` is `jstack`, `poteto-mode` is `jstack-mode`, `poteto-agent` is `jstack-agent`, and `poteto-help` is `jstack-help`. "i" in this readme and the guide is poteto, the original author.
 
-The idea comes from poteto's talk [All Code Is Slop (Except Mine)](https://www.youtube.com/watch?v=O_zcc6Xl12g). Notes on the talk are in [`docs/talk.md`](/home/jisang/git/00_about/jstack/jstack/docs/talk.md).
+The idea comes from poteto's talk [All Code Is Slop (Except Mine)](https://www.youtube.com/watch?v=O_zcc6Xl12g). Notes on the talk are in [`docs/talk.md`](/home/jisang/git/00_about/plugins/jstack/docs/talk.md).
 
 there's a growing sense that ai writes too much slop code. i agree. i don't want to ship like a team of twenty slop artists. throughput without quality is not a goal i aspire to. if you want to go fast, go deep first.
 
@@ -12,12 +12,12 @@ there's a growing sense that ai writes too much slop code. i agree. i don't want
 
 ## install
 
-jstack lives in `~/git/00_about/jstack`. This folder, `jstack/`, is the source. `node scripts/generate-jstack-harness-trees.mjs`, run from the repository root, writes one installable copy per harness under `harness/jstack/`. After you change jstack, run it again and commit the result. `--check` fails while a generated copy is out of date.
+jstack lives in `~/git/00_about/plugins/jstack`, one plugin in the `plugins` repository. This folder is the source. `node scripts/generate-jstack-harness-trees.mjs`, run from the repository root, writes one installable copy per harness under `harness/jstack/`. After you change jstack, run it again and commit the result. `--check` fails while a generated copy is out of date.
 
 | harness | install | adapter |
 |---|---|---|
-| pi | `pi install ~/git/00_about/jstack/harness/jstack/pi`, then `/reload`. Commands are `/skill:<name>`, such as `/skill:jstack-mode`. | [pi adapter](/home/jisang/git/00_about/jstack/jstack/docs/harness/pi.md) |
-| Claude Code | `/plugin marketplace add ~/git/00_about/jstack`, then `/plugin install jstack@jstack`. Commands take a `jstack:` prefix, such as `/jstack:jstack-mode`. | [Claude Code adapter](./docs/harness/claude-code.md) |
+| pi | `pi install ~/git/00_about/plugins/harness/jstack/pi`, then `/reload`. Commands are `/skill:<name>`, such as `/skill:jstack-mode`. | [pi adapter](/home/jisang/git/00_about/plugins/jstack/docs/harness/pi.md) |
+| Claude Code | `/plugin marketplace add ~/git/00_about/plugins`, then `/plugin install jstack@jisang-plugins`. Commands take a `jstack:` prefix, such as `/jstack:jstack-mode`. | [Claude Code adapter](./docs/harness/claude-code.md) |
 | Cursor | copy or link this `jstack/` folder into `~/.cursor/plugins/local/jstack`. | none, the skills use Cursor names |
 
 Each adapter maps the Cursor names in the skills to that harness. A step that needs a Cursor-only feature, such as Bugbot or Automations, is skipped with a one-line note.
@@ -272,9 +272,9 @@ when a default changes, a rule written before the change still pins the old defa
 
 ## automations
 
-jstack also ships a dormant [benny automation pack](/home/jisang/git/00_about/jstack/jstack/automations/benny). benny triages slack issue reports, then reproduces and fixes confirmed bugs with real ui evidence. its files are not registered as slash skills.
+jstack also ships a dormant [benny automation pack](/home/jisang/git/00_about/plugins/jstack/automations/benny). benny triages slack issue reports, then reproduces and fixes confirmed bugs with real ui evidence. its files are not registered as slash skills.
 
-to set it up, point cursor at [`FOR_AGENTS.md`](/home/jisang/git/00_about/jstack/jstack/automations/benny/FOR_AGENTS.md). setup copies the pack into the target repository at `.cursor/automations/benny/`, enables jstack there for shared skills, and keeps user configuration outside the copied pack. benny runs on cursor automations, so it is cursor-only.
+to set it up, point cursor at [`FOR_AGENTS.md`](/home/jisang/git/00_about/plugins/jstack/automations/benny/FOR_AGENTS.md). setup copies the pack into the target repository at `.cursor/automations/benny/`, enables jstack there for shared skills, and keeps user configuration outside the copied pack. benny runs on cursor automations, so it is cursor-only.
 
 ## license
 
